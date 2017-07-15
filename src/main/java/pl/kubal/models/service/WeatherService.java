@@ -1,5 +1,6 @@
 package pl.kubal.models.service;
 
+import javafx.application.Platform;
 import org.json.JSONObject;
 import pl.kubal.models.Config;
 import pl.kubal.models.Utils;
@@ -62,7 +63,8 @@ public class WeatherService {
         cloudy = cloudsObject.getInt("all");
         cityName = city;
 
-        informObservers();
+        //wywolanie watku glownego widzetow nie mozna edytowac na watku pobocznym!!
+        Platform.runLater(() ->informObservers());
     }
         public void addWeatherObserver(IWeatherObserver observer){
             observerList.add(observer);

@@ -9,8 +9,11 @@
 <?import javafx.scene.control.Label?>
 
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.kubal.controllers.MainController">
+<AnchorPane fx:id="myWeather" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.kubal.controllers.MainController">
    <children>
       <Button fx:id="weatherCall" layoutX="274.0" layoutY="188.0" mnemonicParsing="false" text="Pokaz pogodę" />
+      <Label fx:id="textWeather" layoutX="153.0" layoutY="40.0" prefHeight="104.0" prefWidth="273.0" text="Pogoda" />
+      <TextField fx:id="weatherCity" layoutX="162.0" layoutY="151.0" promptText="Wpisz miasto" />
+      <ProgressIndicator fx:id="progressBar" layoutX="286.0" layoutY="168.0" visible="false" />
    </children>
 </AnchorPane>
